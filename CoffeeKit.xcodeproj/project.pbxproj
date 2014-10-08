@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		C433207119E4F4DE000A594C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C433207019E4F4DE000A594C /* AppDelegate.swift */; };
 		C433207319E4F4DE000A594C /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C433207219E4F4DE000A594C /* MasterViewController.swift */; };
-		C433207519E4F4DE000A594C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C433207419E4F4DE000A594C /* DetailViewController.swift */; };
 		C433207819E4F4DE000A594C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C433207619E4F4DE000A594C /* Main.storyboard */; };
 		C433207A19E4F4DE000A594C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C433207919E4F4DE000A594C /* Images.xcassets */; };
 		C433207D19E4F4DE000A594C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C433207B19E4F4DE000A594C /* LaunchScreen.xib */; };
@@ -31,7 +30,6 @@
 		C433206F19E4F4DE000A594C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C433207019E4F4DE000A594C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C433207219E4F4DE000A594C /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		C433207419E4F4DE000A594C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C433207719E4F4DE000A594C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C433207919E4F4DE000A594C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C433207C19E4F4DE000A594C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -81,7 +79,6 @@
 			children = (
 				C433207019E4F4DE000A594C /* AppDelegate.swift */,
 				C433207219E4F4DE000A594C /* MasterViewController.swift */,
-				C433207419E4F4DE000A594C /* DetailViewController.swift */,
 				C433207619E4F4DE000A594C /* Main.storyboard */,
 				C433207919E4F4DE000A594C /* Images.xcassets */,
 				C433207B19E4F4DE000A594C /* LaunchScreen.xib */,
@@ -215,7 +212,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C433207519E4F4DE000A594C /* DetailViewController.swift in Sources */,
 				C433207319E4F4DE000A594C /* MasterViewController.swift in Sources */,
 				C433207119E4F4DE000A594C /* AppDelegate.swift in Sources */,
 			);
