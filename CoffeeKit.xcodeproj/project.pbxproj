@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA68EF6C49054C6387B83B30 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CFC362E346114C1ABDFEC4CD /* libPods.a */; };
 		C433207119E4F4DE000A594C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C433207019E4F4DE000A594C /* AppDelegate.swift */; };
 		C433207319E4F4DE000A594C /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C433207219E4F4DE000A594C /* MasterViewController.swift */; };
 		C433207819E4F4DE000A594C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C433207619E4F4DE000A594C /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB2BF1A56BCA4BDEAA621CC6 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		C433206B19E4F4DE000A594C /* CoffeeKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C433206F19E4F4DE000A594C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C433207019E4F4DE000A594C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +38,8 @@
 		C433208219E4F4DE000A594C /* CoffeeKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C433208719E4F4DE000A594C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C433208819E4F4DE000A594C /* CoffeeKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeKitTests.swift; sourceTree = "<group>"; };
+		C433209219E4F6B8000A594C /* CoffeeKit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoffeeKit-Bridging-Header.h"; sourceTree = "<group>"; };
+		CFC362E346114C1ABDFEC4CD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA68EF6C49054C6387B83B30 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +61,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		211768F3A4E643AEBB63E97C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CFC362E346114C1ABDFEC4CD /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C433206219E4F4DE000A594C = {
 			isa = PBXGroup;
 			children = (
 				C433206D19E4F4DE000A594C /* CoffeeKit */,
 				C433208519E4F4DE000A594C /* CoffeeKitTests */,
 				C433206C19E4F4DE000A594C /* Products */,
+				BB2BF1A56BCA4BDEAA621CC6 /* Pods.xcconfig */,
+				211768F3A4E643AEBB63E97C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +98,7 @@
 				C433207919E4F4DE000A594C /* Images.xcassets */,
 				C433207B19E4F4DE000A594C /* LaunchScreen.xib */,
 				C433206E19E4F4DE000A594C /* Supporting Files */,
+				C433209219E4F6B8000A594C /* CoffeeKit-Bridging-Header.h */,
 			);
 			path = CoffeeKit;
 			sourceTree = "<group>";
@@ -119,9 +135,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C433208C19E4F4DE000A594C /* Build configuration list for PBXNativeTarget "CoffeeKit" */;
 			buildPhases = (
+				773C284E1CF149488C1A1D60 /* Check Pods Manifest.lock */,
 				C433206719E4F4DE000A594C /* Sources */,
 				C433206819E4F4DE000A594C /* Frameworks */,
 				C433206919E4F4DE000A594C /* Resources */,
+				AE51BF0062094D77BF6720AC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,6 +224,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		773C284E1CF149488C1A1D60 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AE51BF0062094D77BF6720AC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C433206719E4F4DE000A594C /* Sources */ = {
@@ -334,21 +385,28 @@
 		};
 		C433208D19E4F4DE000A594C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB2BF1A56BCA4BDEAA621CC6 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CoffeeKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CoffeeKit/CoffeeKit-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		C433208E19E4F4DE000A594C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB2BF1A56BCA4BDEAA621CC6 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = CoffeeKit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CoffeeKit/CoffeeKit-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -405,6 +463,7 @@
 				C433208E19E4F4DE000A594C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C433208F19E4F4DE000A594C /* Build configuration list for PBXNativeTarget "CoffeeKitTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +472,7 @@
 				C433209119E4F4DE000A594C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
